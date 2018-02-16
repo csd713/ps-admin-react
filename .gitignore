@@ -59,4 +59,4 @@ typings/
 
 # Distribution files
 dist
-
+.DS_Store

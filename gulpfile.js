@@ -20,7 +20,8 @@ var config = {
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
             'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
         ],
-        dist: './dist'
+        dist: './dist',
+        images: './src/images/*'
     }
 }
 
@@ -72,8 +73,20 @@ gulp.task('lint', function () {
         .pipe(lint.format());
 });
 
+//Task: move images to dist directory
+gulp.task('images', function () {
+    gulp.src(config.paths.images)
+        .pipe(gulp.dest(config.paths.dist + '/images'))
+        .pipe(connect.reload());
+
+    //publish favicon
+    gulp.src('./src/favicon.ico')
+        .pipe(gulp.dest(config.paths.dist));
+});
+
+
 //Task: Default tasks
-gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'images', 'lint', 'open', 'watch']);
 
 //Task: Watch the files for changes
 gulp.task('watch', function () {
