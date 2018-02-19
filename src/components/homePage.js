@@ -8,7 +8,7 @@ var Link = Router.Link;
 var Home = React.createClass({
     render: function () {
         return (
-            <div className="container jumbotron">
+            <div className="jumbotron">
                 <h1> User Administration </h1>
                 <p> Using React, React Router, and Flux for ultra-responsive web-apps</p>
                 <Link to="about" className="btn btn-primary btn-lg">Learn More</Link>

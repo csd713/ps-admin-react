@@ -8,7 +8,7 @@ $ = jQuery = require('jquery'); //bootstrap expects jQuery to be in global name 
 var App = React.createClass({
     render: function () {
         return (
-            <div>
+            <div className="container-fluid">
                 <Header />
                 <RouteHandler />
             </div>
