@@ -5,7 +5,7 @@ var React = require('react');
 var About = React.createClass({
     render: function () {
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <h1>About</h1>
                 <p>
                     This application uses the following technologies:
