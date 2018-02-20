@@ -11,7 +11,7 @@ var Header = React.createClass({
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <Link to="app" className="navbar-brand">
-                        <img src="images/acquia-logo.png" width="140" height="50" />
+                        <img src="images/acquia-logo.png" width="130" height="35" />
                     </Link>
                     <ul className="nav navbar-nav">
                         <li><Link to="app">Home</Link></li>
